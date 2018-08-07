@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CEA17F12211963DC00ABE8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F11211963DC00ABE8AA /* AppDelegate.swift */; };
-		CEA17F14211963DC00ABE8AA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F13211963DC00ABE8AA /* FirstViewController.swift */; };
-		CEA17F16211963DC00ABE8AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F15211963DC00ABE8AA /* SecondViewController.swift */; };
+		CEA17F14211963DC00ABE8AA /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F13211963DC00ABE8AA /* MemoViewController.swift */; };
+		CEA17F16211963DC00ABE8AA /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F15211963DC00ABE8AA /* MemoListViewController.swift */; };
 		CEA17F19211963DC00ABE8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA17F17211963DC00ABE8AA /* Main.storyboard */; };
 		CEA17F1B211963DD00ABE8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA17F1A211963DD00ABE8AA /* Assets.xcassets */; };
 		CEA17F1E211963DD00ABE8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA17F1C211963DD00ABE8AA /* LaunchScreen.storyboard */; };
@@ -37,8 +37,8 @@
 /* Begin PBXFileReference section */
 		CEA17F0E211963DC00ABE8AA /* MyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA17F11211963DC00ABE8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEA17F13211963DC00ABE8AA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CEA17F15211963DC00ABE8AA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CEA17F13211963DC00ABE8AA /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		CEA17F15211963DC00ABE8AA /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		CEA17F18211963DC00ABE8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA17F1A211963DD00ABE8AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA17F1D211963DD00ABE8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA17F11211963DC00ABE8AA /* AppDelegate.swift */,
-				CEA17F13211963DC00ABE8AA /* FirstViewController.swift */,
-				CEA17F15211963DC00ABE8AA /* SecondViewController.swift */,
+				CEA17F13211963DC00ABE8AA /* MemoViewController.swift */,
+				CEA17F15211963DC00ABE8AA /* MemoListViewController.swift */,
 				CEA17F17211963DC00ABE8AA /* Main.storyboard */,
 				CEA17F1A211963DD00ABE8AA /* Assets.xcassets */,
 				CEA17F1C211963DD00ABE8AA /* LaunchScreen.storyboard */,
@@ -259,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA17F16211963DC00ABE8AA /* SecondViewController.swift in Sources */,
+				CEA17F16211963DC00ABE8AA /* MemoListViewController.swift in Sources */,
 				CEA17F12211963DC00ABE8AA /* AppDelegate.swift in Sources */,
-				CEA17F14211963DC00ABE8AA /* FirstViewController.swift in Sources */,
+				CEA17F14211963DC00ABE8AA /* MemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

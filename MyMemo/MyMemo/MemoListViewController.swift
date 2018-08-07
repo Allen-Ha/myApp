@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  MyMemo
 //
 //  Created by user on 2018. 8. 7..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class MemoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
