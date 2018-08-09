@@ -10,6 +10,8 @@ import UIKit
 
 class MemoListViewController: UIViewController {
 
+    @IBOutlet weak var MemoTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
