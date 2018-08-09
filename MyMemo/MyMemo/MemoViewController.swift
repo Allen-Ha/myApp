@@ -10,7 +10,7 @@ import UIKit
 
 class MemoViewController: UIViewController {
     
-    var realmManager : RealmManager = RealmManager.sharedInstence;
+    let realmManager : RealmManager = RealmManager.sharedInstence;
     
     @IBOutlet weak var textViewMemoContent: UITextView!
     @IBOutlet weak var btnSave: UIButton!
@@ -20,35 +20,18 @@ class MemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-//        let fileManager = FileManager()
-//
-//        // document 디렉토리의 경로 저장
-//        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-//
-//        // 해당 디렉토리 이름 지정
-//        let dataPath = documentsDirectory.appendingPathComponent("data")
-//
-//        do {
-//            // 디렉토리 생성
-//            try fileManager.createDirectory(atPath: dataPath.path, withIntermediateDirectories: false, attributes: nil)
-//
-//        } catch let error as NSError {
-//            print("Error creating directory: \(error.localizedDescription)")
-//        }
-//
-//        do {
-//            // 파일 이름을 기존의 경로에 추가
-//            let helloPath = dataPath.appendingPathComponent("Hello.txt")
-//
-//            // 내용 읽기
-//            let text = try String(contentsOf: helloPath, encoding: .utf8)
-//
-//            textViewMemoContent.text = text;
-//        }
-//        catch let error as NSError {
-//            print("Error Reading File : \(error.localizedDescription)")
-//        }
+        let tabController = self.tabBarController as! MemoTabViewController;
+        
+        //공용 저장소 데이터가 있으면 유저가 선택했으므로 화면에 뿌려준다.
+        if(tabController.selectTextContent.date.count > 0)
+        {
+            self.textViewMemoContent.text = tabController.selectTextContent.text;
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,52 +43,29 @@ class MemoViewController: UIViewController {
         
         let textContent = TextContent();
         textContent.date = Util.sharedInstence.getTodayString();
-        textContent.text = textViewMemoContent.text!;
+        textContent.text = self.textViewMemoContent.text!;
         
-        if(!textViewMemoContent.text.isEmpty)
+        if(!self.textViewMemoContent.text.isEmpty)
         {
-            realmManager.addMemoData(textContent: textContent);
-            lblSubject.text = "적절하게 입력";
+            self.realmManager.addMemoData(textContent: textContent);
+            self.lblSubject.text = "적절하게 입력";
         }
         else
         {
-            lblSubject.text = "내용을 입력해라";
+            self.lblSubject.text = "내용을 입력해라";
         }
-        
-        
-//        if(!textViewMemoContent.text.isEmpty)
-//        {
-//            let fileManager = FileManager()
-//
-//            // document 디렉토리의 경로 저장
-//            let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-//
-//            // 해당 디렉토리 이름 지정
-//            let dataPath = documentsDirectory.appendingPathComponent("data")
-//
-//            do {
-//                // 파일 이름을 기존의 경로에 추가
-//                let helloPath = dataPath.appendingPathComponent("Hello.txt")
-//
-//                let text = textViewMemoContent.text!;
-//
-//                do {
-//                    // 쓰기 작업
-//                    try text.write(to: helloPath, atomically: false, encoding: .utf8)
-//                }
-//            } catch let error as NSError {
-//                print("Error Writing File : \(error.localizedDescription)")
-//            }
-//        }
-//        else
-//        {
-//            print("There are no characters in the text view!");
-//        }
     }
     
     @IBAction func btnTextDeleteAction(_ sender: Any) {
         print("btnTextDeleteAction");
+
         
+        //다른 탭에서 데이터 가져오기
+//        let tbCon = self.tabBarController  as! MemoTabViewController;
+//        let listViewCon = tbCon.viewControllers?[1] as! MemoListViewController;
+//        print("listViewCon.testData = \(listViewCon.testData)");
+        
+                
 //        print("textContent = \(textViewMemoContent.text)")
         
         //텍스트 삭제

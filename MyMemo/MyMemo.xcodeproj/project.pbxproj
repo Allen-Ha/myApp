@@ -22,6 +22,7 @@
 		CEA17F4F211BD4A300ABE8AA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F4E211BD4A300ABE8AA /* RealmManager.swift */; };
 		CEA17F52211BDB6400ABE8AA /* TextContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F51211BDB6400ABE8AA /* TextContentModel.swift */; };
 		CEA17F54211C0F9200ABE8AA /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F53211C0F9200ABE8AA /* Util.swift */; };
+		CEA17F57211C1C6D00ABE8AA /* MemoTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F56211C1C6D00ABE8AA /* MemoTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		CEA17F4E211BD4A300ABE8AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		CEA17F51211BDB6400ABE8AA /* TextContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentModel.swift; sourceTree = "<group>"; };
 		CEA17F53211C0F9200ABE8AA /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		CEA17F56211C1C6D00ABE8AA /* MemoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				CEA17F11211963DC00ABE8AA /* AppDelegate.swift */,
 				CEA17F13211963DC00ABE8AA /* MemoViewController.swift */,
 				CEA17F15211963DC00ABE8AA /* MemoListViewController.swift */,
+				CEA17F56211C1C6D00ABE8AA /* MemoTabViewController.swift */,
 				CEA17F17211963DC00ABE8AA /* Main.storyboard */,
 				CEA17F1A211963DD00ABE8AA /* Assets.xcassets */,
 				CEA17F1C211963DD00ABE8AA /* LaunchScreen.storyboard */,
@@ -332,6 +335,7 @@
 				CEA17F4F211BD4A300ABE8AA /* RealmManager.swift in Sources */,
 				CEA17F12211963DC00ABE8AA /* AppDelegate.swift in Sources */,
 				CEA17F14211963DC00ABE8AA /* MemoViewController.swift in Sources */,
+				CEA17F57211C1C6D00ABE8AA /* MemoTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,20 +23,25 @@ class RealmManager {
     
     
     func addMemoData(textContent: TextContent) {
-        try! realm.write {
-            realm.add(textContent);
+        try! self.realm.write {
+            self.realm.add(textContent);
         }
     }
     
     func removeMemoData(textContent: TextContent) {
-        try! realm.write {
-            realm.delete(textContent);
+        try! self.realm.write {
+            self.realm.delete(textContent);
         }
     }
     
     func removeAllMemoData() {
-        try! realm.write {
-            realm.deleteAll();
+        try! self.realm.write {
+            self.realm.deleteAll();
         }
+    }
+    
+    func getAllMemoData() -> Results<TextContent> {
+        let textContentResultList = realm.objects(TextContent.self).sorted(byKeyPath: "date", ascending: true);
+        return textContentResultList;
     }
 }
