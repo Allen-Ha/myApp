@@ -23,6 +23,7 @@
 		CEA17F52211BDB6400ABE8AA /* TextContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F51211BDB6400ABE8AA /* TextContentModel.swift */; };
 		CEA17F54211C0F9200ABE8AA /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F53211C0F9200ABE8AA /* Util.swift */; };
 		CEA17F57211C1C6D00ABE8AA /* MemoTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F56211C1C6D00ABE8AA /* MemoTabViewController.swift */; };
+		CEA17F5A2121298100ABE8AA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F592121298100ABE8AA /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		CEA17F51211BDB6400ABE8AA /* TextContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentModel.swift; sourceTree = "<group>"; };
 		CEA17F53211C0F9200ABE8AA /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CEA17F56211C1C6D00ABE8AA /* MemoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTabViewController.swift; sourceTree = "<group>"; };
+		CEA17F592121298100ABE8AA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		CEA17F10211963DC00ABE8AA /* MyMemo */ = {
 			isa = PBXGroup;
 			children = (
+				CEA17F582121292000ABE8AA /* extension */,
 				CEA17F55211C104300ABE8AA /* Util */,
 				CEA17F50211BDB4C00ABE8AA /* Model */,
 				CEA17F4D211BD48900ABE8AA /* Manager */,
@@ -195,6 +198,14 @@
 				CEA17F53211C0F9200ABE8AA /* Util.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		CEA17F582121292000ABE8AA /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEA17F592121298100ABE8AA /* UIViewController+Extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA17F5A2121298100ABE8AA /* UIViewController+Extension.swift in Sources */,
 				CEA17F52211BDB6400ABE8AA /* TextContentModel.swift in Sources */,
 				CEA17F54211C0F9200ABE8AA /* Util.swift in Sources */,
 				CEA17F16211963DC00ABE8AA /* MemoListViewController.swift in Sources */,
@@ -508,8 +520,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCJDE2U767;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework/Realm",
@@ -531,8 +544,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCJDE2U767;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework/Realm",
