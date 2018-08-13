@@ -58,7 +58,22 @@ class MemoViewController: UIViewController {
     
     @IBAction func btnTextDeleteAction(_ sender: Any) {
         print("btnTextDeleteAction");
+        
+        let tabController = self.tabBarController as! MemoTabViewController;
 
+        //업데이트 테스트
+        if(tabController.selectTextContent.date.count > 0)
+        {
+            let textContent = TextContent();
+            textContent.date = tabController.selectTextContent.date;
+            textContent.text = self.textViewMemoContent.text!;
+            
+            //tabController에 있는 램에서 직접 가져온 데이터를 수정하려고 하면 트랜잭션 오류가 발생한다.
+            self.realmManager.updateMemoData(textContent: textContent);
+        }
+        
+    }
+        
         
         //다른 탭에서 데이터 가져오기
 //        let tbCon = self.tabBarController  as! MemoTabViewController;
@@ -71,29 +86,14 @@ class MemoViewController: UIViewController {
         //텍스트 삭제
 //        textViewMemoContent.text = "";
         
-//        let realm = try! Realm();
-        
-//        try! realm.write {
-//            realm.deleteAll();
-//        }
         
 //        let textContentResultList = realm.objects(TextContent.self).sorted(byKeyPath: "count", ascending: true);
 //        print("textContentResultList = \(textContentResultList)");
 //
 //        let textContent = realm.objects(TextContent.self).sorted(byKeyPath: "count", ascending: true).first
 //        self.textViewMemoContent.text = textContent?.text;
+
         
-//        if (textContent != nil)
-//        {
-//            try! realm.write {
-//                realm.delete(textContent!);
-//            }
-//        }
-//        else
-//        {
-//            print("not found realm Data");
-//        }
-        
-    }
+    
 }
 

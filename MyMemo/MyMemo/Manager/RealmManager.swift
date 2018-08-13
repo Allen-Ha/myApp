@@ -28,6 +28,15 @@ class RealmManager {
         }
     }
     
+    func updateMemoData(textContent: TextContent) {
+        let previousTextContents = realm.objects(TextContent.self).filter("date = %@", textContent.date);
+        let previousTextContent = previousTextContents.first;
+        try! self.realm.write {
+            previousTextContent?.text = textContent.text;
+            previousTextContent?.date = textContent.date;
+        }
+    }
+        
     func removeMemoData(textContent: TextContent) {
         try! self.realm.write {
             self.realm.delete(textContent);
@@ -41,6 +50,11 @@ class RealmManager {
     }
     
     func getAllMemoData() -> Results<TextContent> {
+//        var textContentResultList : Results<TextContent>?;
+//        try! self.realm.write {
+//            textContentResultList = realm.objects(TextContent.self).sorted(byKeyPath: "date", ascending: true);
+//        }
+        
         let textContentResultList = realm.objects(TextContent.self).sorted(byKeyPath: "date", ascending: true);
         return textContentResultList;
     }
