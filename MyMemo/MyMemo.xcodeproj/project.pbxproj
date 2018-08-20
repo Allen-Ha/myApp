@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE77391B212A931B00FDF1E4 /* memo_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = CE77391A212A931B00FDF1E4 /* memo_screen.png */; };
 		CEA17F12211963DC00ABE8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F11211963DC00ABE8AA /* AppDelegate.swift */; };
 		CEA17F14211963DC00ABE8AA /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F13211963DC00ABE8AA /* MemoViewController.swift */; };
 		CEA17F16211963DC00ABE8AA /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA17F15211963DC00ABE8AA /* MemoListViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE77391A212A931B00FDF1E4 /* memo_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memo_screen.png; sourceTree = "<group>"; };
 		CEA17F0E211963DC00ABE8AA /* MyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA17F11211963DC00ABE8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA17F13211963DC00ABE8AA /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				CEA17F13211963DC00ABE8AA /* MemoViewController.swift */,
 				CEA17F15211963DC00ABE8AA /* MemoListViewController.swift */,
 				CEA17F17211963DC00ABE8AA /* Main.storyboard */,
+				CE77391A212A931B00FDF1E4 /* memo_screen.png */,
 				CEA17F1A211963DD00ABE8AA /* Assets.xcassets */,
 				CEA17F1C211963DD00ABE8AA /* LaunchScreen.storyboard */,
 				CEA17F1F211963DD00ABE8AA /* Info.plist */,
@@ -313,6 +316,7 @@
 				CEA17F1E211963DD00ABE8AA /* LaunchScreen.storyboard in Resources */,
 				CEA17F1B211963DD00ABE8AA /* Assets.xcassets in Resources */,
 				CEA17F19211963DC00ABE8AA /* Main.storyboard in Resources */,
+				CE77391B212A931B00FDF1E4 /* memo_screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

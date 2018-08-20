@@ -20,6 +20,8 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.MemoTableView.separatorStyle = UITableViewCellSeparatorStyle.none;
+        
         self.MemoTableView.delegate = self;
         self.MemoTableView.dataSource = self;        
         self.setupMemoData();
@@ -97,15 +99,19 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func btnEditAction(_ sender: UIBarButtonItem) {
-        if (self.MemoTableView.isEditing)
+        
+        if(self.memoDataArray!.count > 0)
         {
-            sender.title = "변경";
-            self.MemoTableView.setEditing(false, animated: true);
-        }
-        else
-        {
-            sender.title = "완료";
-            self.MemoTableView.setEditing(true, animated: true);
+            if (self.MemoTableView.isEditing)
+            {
+                sender.title = "변경";
+                self.MemoTableView.setEditing(false, animated: true);
+            }
+            else
+            {
+                sender.title = "완료";
+                self.MemoTableView.setEditing(true, animated: true);
+            }
         }
     }
 }

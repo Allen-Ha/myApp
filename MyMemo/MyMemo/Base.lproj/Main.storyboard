@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8g-WE-DOH">
-                                <rect key="frame" x="16" y="600" width="343" height="30"/>
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <state key="normal" title="저장"/>
                                 <connections>
                                     <action selector="btnSaveAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gly-XJ-Ufi"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VFR-FM-qeh">
-                                <rect key="frame" x="16" y="84" width="343" height="508"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="84" width="343" height="525"/>
+                                <color key="backgroundColor" red="1" green="0.91149375630870555" blue="0.6459750252348222" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -46,12 +46,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5G4-RC-zs8" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="62I-b4-Xqp"/>
-                            <constraint firstItem="E8g-WE-DOH" firstAttribute="top" secondItem="VFR-FM-qeh" secondAttribute="bottom" constant="8" id="67m-Xs-W8P"/>
                             <constraint firstItem="VFR-FM-qeh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="6i3-qG-abi"/>
+                            <constraint firstItem="E8g-WE-DOH" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="7PY-Vk-F9d"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="VFR-FM-qeh" secondAttribute="trailing" constant="16" id="8eU-bp-auf"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="E8g-WE-DOH" secondAttribute="trailing" constant="16" id="9jc-vX-e80"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="E8g-WE-DOH" secondAttribute="bottom" constant="37" id="Elu-4X-YQe"/>
-                            <constraint firstItem="E8g-WE-DOH" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="bnb-v6-Gpp"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="E8g-WE-DOH" secondAttribute="trailing" constant="16" id="Af4-2x-9uN"/>
+                            <constraint firstItem="E8g-WE-DOH" firstAttribute="top" secondItem="VFR-FM-qeh" secondAttribute="bottom" constant="8" id="atB-kN-AdM"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="E8g-WE-DOH" secondAttribute="bottom" constant="20" id="eHf-aN-8Iv"/>
                             <constraint firstItem="VFR-FM-qeh" firstAttribute="top" secondItem="5G4-RC-zs8" secondAttribute="bottom" constant="20" id="jJs-lA-51U"/>
                             <constraint firstItem="5G4-RC-zs8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="vOl-Jz-7xa"/>
                             <constraint firstItem="5G4-RC-zs8" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="veF-8l-uBf"/>
@@ -61,6 +61,7 @@
                     <tabBarItem key="tabBarItem" title="Memo" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="btnSave" destination="E8g-WE-DOH" id="KBI-uS-7rf"/>
+                        <outlet property="navigationBar" destination="5G4-RC-zs8" id="K3W-s7-Q7o"/>
                         <outlet property="textViewMemoContent" destination="VFR-FM-qeh" id="9HK-f6-zRg"/>
                     </connections>
                 </viewController>
@@ -79,6 +80,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-f5-I8o">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="9SZ-fr-bzz">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="JRA-cd-Q9r">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>

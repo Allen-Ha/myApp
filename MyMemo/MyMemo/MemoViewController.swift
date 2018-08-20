@@ -13,7 +13,7 @@ class MemoViewController: UIViewController {
     var selectTextContent = TextContent();
     let realmManager : RealmManager = RealmManager.sharedInstence;
     var isModify: Bool = false;// 수정인지 추가인지 확인한다. true : 기존 메모 수정, false : 새로운 메모
-    
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var textViewMemoContent: UITextView!
     @IBOutlet weak var btnSave: UIButton!
         
@@ -30,6 +30,7 @@ class MemoViewController: UIViewController {
         {
             self.btnSave.setTitle("수정", for: .normal);
             self.textViewMemoContent.text = selectTextContent.text;
+            self.navigationBar.topItem?.title = selectTextContent.date;
         }
         else
         {
