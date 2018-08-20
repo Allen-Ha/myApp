@@ -26,12 +26,6 @@ class MemoViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        if(selectTextContent.date.count > 0)
-//        {
-//            self.btnTextDelete.isHidden = true;
-//            self.textViewMemoContent.text = selectTextContent.text;
-//        }
-        
         if(self.isModify)
         {
             self.btnSave.setTitle("수정", for: .normal);
@@ -47,12 +41,24 @@ class MemoViewController: UIViewController {
         super.didReceiveMemoryWarning();
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    //Local Func
+    
+    func closeMemoView() {
+        self.dismiss(animated: false, completion: nil);
+    }
+    
+    //Action
+    
     @IBAction func btnSaveAction(_ sender: Any) {
         print("btnSaveAction");
         
         let textContent = TextContent();
         textContent.text = self.textViewMemoContent.text!;
-         
+        
         if(!self.textViewMemoContent.text.isEmpty)
         {
             if(isModify)
@@ -81,16 +87,11 @@ class MemoViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { action in
             }))
             self.present(alert, animated: true);
-//            self.present(alertController,animated: true, completion: { () in
-//            });
+            //            self.present(alertController,animated: true, completion: { () in
+            //            });
         }
     }
     
-    
-    func closeMemoView() {
-        self.dismiss(animated: false, completion: nil);
-    }
-        
     @IBAction func btnBackAction(_ sender: Any) {
         self.closeMemoView();
     }

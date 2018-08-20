@@ -34,8 +34,11 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
     }
     
+    
+    //Local Func
+    
     func setupMemoData() {
-        self.memoDataArray = realmManager.getAllMemoData();
+        self.memoDataArray = self.realmManager.getAllMemoData();
         self.MemoTableView.reloadData();
     }
     
@@ -53,6 +56,8 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
         vc.isModify = isModify;
         self.present(vc, animated: true, completion: nil);
     }
+    
+    //TableView Delegate
     
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,19 +78,35 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row)");
-                
         self.showMemoView(textContent: self.memoDataArray![indexPath.row], isModify: true);
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete)
+        {
+            self.realmManager.removeMemoData(textContent: self.memoDataArray![indexPath.row]);
+            self.setupMemoData();
+        }
+    }
+    
+    
+    //Action
     
     @IBAction func btnWriteAction(_ sender: Any) {
-        print("btnWriteAction");
         self.showMemoView(textContent: nil, isModify: false);
     }
     
-    @IBAction func btnDeleteAction(_ sender: Any) {
-        print("btnDeleteAction");
+    @IBAction func btnEditAction(_ sender: UIBarButtonItem) {
+        if (self.MemoTableView.isEditing)
+        {
+            sender.title = "변경";
+            self.MemoTableView.setEditing(false, animated: true);
+        }
+        else
+        {
+            sender.title = "완료";
+            self.MemoTableView.setEditing(true, animated: true);
+        }
     }
 }
 

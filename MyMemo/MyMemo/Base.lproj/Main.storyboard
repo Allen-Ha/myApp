@@ -99,9 +99,9 @@
                                                 <action selector="btnWriteAction:" destination="8rJ-Kc-sve" id="cJb-UJ-EL5"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="삭제" id="FCb-sa-Fx9">
+                                        <barButtonItem key="rightBarButtonItem" title="변경" id="FCb-sa-Fx9">
                                             <connections>
-                                                <action selector="btnDeleteAction:" destination="8rJ-Kc-sve" id="7FU-yL-PUe"/>
+                                                <action selector="btnEditAction:" destination="8rJ-Kc-sve" id="gEs-Rf-FHc"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
