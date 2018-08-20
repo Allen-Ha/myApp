@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Util {
     static let sharedInstence : Util = {
@@ -24,6 +25,17 @@ class Util {
         
         return todayString;
     }
+    
+//    func showCommonAlert(title: String, message: String) -> UIAlertController{
+//        let alertController = UIAlertController(title: title,message: message, preferredStyle: UIAlertControllerStyle.alert)
+//        
+//        let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+//
+//        alertController.addAction(cancelButton)
+//
+//        return alertController;
+////        self.present(alertController,animated: true,completion: nil)
+//    }
 }
 
 

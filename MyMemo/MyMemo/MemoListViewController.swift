@@ -21,7 +21,7 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         self.MemoTableView.delegate = self;
-        self.MemoTableView.dataSource = self;
+        self.MemoTableView.dataSource = self;        
         self.setupMemoData();
     }
     
@@ -38,6 +38,22 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
         self.memoDataArray = realmManager.getAllMemoData();
         self.MemoTableView.reloadData();
     }
+    
+    func showMemoView(textContent: TextContent?, isModify: Bool) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "MemoView") as! MemoViewController;
+        if(textContent != nil)
+        {
+            vc.selectTextContent = textContent!;
+        }
+        else
+        {
+            print("new memo!!");
+        }
+        vc.isModify = isModify;
+        self.present(vc, animated: true, completion: nil);
+    }
+    
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memoDataArray!.count;
@@ -58,10 +74,18 @@ class MemoListViewController: UIViewController, UITableViewDelegate, UITableView
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row)");
-        
-        //데이터 저장
-        let tabController = self.tabBarController as! MemoTabViewController;
-        tabController.selectTextContent = self.memoDataArray![indexPath.row];
+                
+        self.showMemoView(textContent: self.memoDataArray![indexPath.row], isModify: true);
+    }
+    
+    
+    @IBAction func btnWriteAction(_ sender: Any) {
+        print("btnWriteAction");
+        self.showMemoView(textContent: nil, isModify: false);
+    }
+    
+    @IBAction func btnDeleteAction(_ sender: Any) {
+        print("btnDeleteAction");
     }
 }
 

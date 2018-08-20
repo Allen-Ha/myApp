@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,66 +12,61 @@
         <!--Memo-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="MemoViewController" customModule="MyMemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoView" id="9pv-A4-QxB" customClass="MemoViewController" customModule="MyMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8g-WE-DOH">
-                                <rect key="frame" x="16" y="551" width="30" height="30"/>
+                                <rect key="frame" x="16" y="600" width="343" height="30"/>
                                 <state key="normal" title="저장"/>
                                 <connections>
                                     <action selector="btnSaveAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gly-XJ-Ufi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-iH-Ucl">
-                                <rect key="frame" x="329" y="551" width="30" height="30"/>
-                                <state key="normal" title="삭제"/>
-                                <connections>
-                                    <action selector="btnTextDeleteAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aP9-qG-6Mm"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VFR-FM-qeh">
-                                <rect key="frame" x="16" y="73" width="343" height="470"/>
+                                <rect key="frame" x="16" y="84" width="343" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적절하게 입력" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAe-63-sFN">
-                                <rect key="frame" x="20" y="44" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5G4-RC-zs8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="메모장" id="zpo-9l-r5H">
+                                        <barButtonItem key="leftBarButtonItem" title="뒤로" id="iEq-kB-hQH">
+                                            <connections>
+                                                <action selector="btnBackAction:" destination="9pv-A4-QxB" id="Zwc-4P-Z5M"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5G4-RC-zs8" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="62I-b4-Xqp"/>
                             <constraint firstItem="E8g-WE-DOH" firstAttribute="top" secondItem="VFR-FM-qeh" secondAttribute="bottom" constant="8" id="67m-Xs-W8P"/>
                             <constraint firstItem="VFR-FM-qeh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="6i3-qG-abi"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="gs7-iH-Ucl" secondAttribute="bottom" constant="37" id="7cr-3A-ngL"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="VFR-FM-qeh" secondAttribute="trailing" constant="16" id="8eU-bp-auf"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="E8g-WE-DOH" secondAttribute="trailing" constant="16" id="9jc-vX-e80"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="E8g-WE-DOH" secondAttribute="bottom" constant="37" id="Elu-4X-YQe"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="gs7-iH-Ucl" secondAttribute="trailing" constant="16" id="O9r-Kf-z8O"/>
-                            <constraint firstItem="IAe-63-sFN" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="QJD-13-fCz"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="IAe-63-sFN" secondAttribute="trailing" constant="20" id="VEn-bc-e4M"/>
                             <constraint firstItem="E8g-WE-DOH" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="bnb-v6-Gpp"/>
-                            <constraint firstItem="VFR-FM-qeh" firstAttribute="top" secondItem="IAe-63-sFN" secondAttribute="bottom" constant="8" id="ci3-sM-vIO"/>
-                            <constraint firstItem="gs7-iH-Ucl" firstAttribute="top" secondItem="VFR-FM-qeh" secondAttribute="bottom" constant="8" id="w9B-go-tjc"/>
-                            <constraint firstItem="IAe-63-sFN" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="24" id="xgw-kV-UAg"/>
+                            <constraint firstItem="VFR-FM-qeh" firstAttribute="top" secondItem="5G4-RC-zs8" secondAttribute="bottom" constant="20" id="jJs-lA-51U"/>
+                            <constraint firstItem="5G4-RC-zs8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="vOl-Jz-7xa"/>
+                            <constraint firstItem="5G4-RC-zs8" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="veF-8l-uBf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Memo" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="btnSave" destination="E8g-WE-DOH" id="KBI-uS-7rf"/>
-                        <outlet property="btnTextDelete" destination="gs7-iH-Ucl" id="teI-bN-LnZ"/>
-                        <outlet property="lblSubject" destination="IAe-63-sFN" id="DMo-V9-uWp"/>
                         <outlet property="textViewMemoContent" destination="VFR-FM-qeh" id="9HK-f6-zRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-321.19565217391306"/>
+            <point key="canvasLocation" x="984.79999999999995" y="-322.48875562218893"/>
         </scene>
         <!--Memo List-->
         <scene sceneID="wg7-f3-ORb">
@@ -83,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-f5-I8o">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" id="JRA-cd-Q9r">
@@ -96,42 +90,45 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDc-L9-NpO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="메모 목록" id="eRO-T3-9Ne">
+                                        <barButtonItem key="leftBarButtonItem" title="쓰기" id="utz-zP-TNt">
+                                            <connections>
+                                                <action selector="btnWriteAction:" destination="8rJ-Kc-sve" id="cJb-UJ-EL5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="삭제" id="FCb-sa-Fx9">
+                                            <connections>
+                                                <action selector="btnDeleteAction:" destination="8rJ-Kc-sve" id="7FU-yL-PUe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Pee-f5-I8o" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="Afs-dU-70k"/>
-                            <constraint firstItem="Pee-f5-I8o" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="V64-eq-ZEI"/>
+                            <constraint firstItem="MDc-L9-NpO" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="LYr-ug-sqB"/>
+                            <constraint firstItem="MDc-L9-NpO" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Lbm-OJ-Kbl"/>
+                            <constraint firstItem="Pee-f5-I8o" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="44" id="V64-eq-ZEI"/>
                             <constraint firstItem="Pee-f5-I8o" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="ieN-gm-kH2"/>
+                            <constraint firstItem="MDc-L9-NpO" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="saL-Cp-gfs"/>
                             <constraint firstItem="Pee-f5-I8o" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="wWS-VE-rPq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Memo List" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="tjT-I0-rmC"/>
                     <connections>
                         <outlet property="MemoTableView" destination="Pee-f5-I8o" id="Cvd-X6-p62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
-        </scene>
-        <!--Memo Tab View Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="MemoTabViewController" customModule="MyMemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="15" y="-322"/>
         </scene>
     </scenes>
     <resources>
